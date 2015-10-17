@@ -46,7 +46,7 @@
 
 <RelativeLayout
     style="@style/example_container"
-    android:background="@android:color/black"
+    android:background="@color/gunmetal"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="fill_parent">
@@ -59,34 +59,29 @@
         android:src="@drawable/qlogo"
         app:roundedCorners="true"
         app:hasBorder="false"
-        android:layout_above="@+id/login"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
-    <com.beardedhen.androidbootstrap.BootstrapButton
+    <Button
         android:id="@+id/login"
-        style="@style/wrapping_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Login"
-        app:bootstrapBrand="primary"
-        app:bootstrapSize="lg"
-        app:buttonMode="regular"
-        app:showOutline="false"
-        app:roundedCorners="true"
-        android:layout_gravity="center_vertical"
+        android:background="@android:color/transparent"
+        android:textColor="@android:color/white"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
-    <com.beardedhen.androidbootstrap.BootstrapButton
-        android:id="@+id/register"
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Register"
-        app:bootstrapBrand="primary"
-        app:bootstrapSize="lg"
-        app:buttonMode="regular"
-        app:showOutline="false"
-        app:roundedCorners="true"
+        android:id="@+id/register"
+        android:background="@android:color/transparent"
+        android:textColor="@android:color/white"
         android:layout_below="@+id/login"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="27dp" />
+        android:layout_marginTop="26dp" />
+
 
 </RelativeLayout>
