@@ -1,5 +1,7 @@
 package com.example.pranav.myapplication;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -10,7 +12,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class MainPage extends AppCompatActivity {
+public class MainPage extends Activity {
 
 
 
@@ -55,5 +57,10 @@ public class MainPage extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void onLoginPress(View view) {
+        Intent intent = new Intent(this,LoginPage.class);
+        startActivity(intent);
     }
 }
