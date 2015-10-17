@@ -38,6 +38,6 @@ public class LoginPage extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    
+
 
  }
