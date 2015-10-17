@@ -52,6 +52,16 @@
     android:layout_height="fill_parent">
 
 
+    <com.beardedhen.androidbootstrap.BootstrapThumbnail
+        android:id="@+id/logo"
+        android:layout_width="@dimen/default_circle_size"
+        android:layout_height="@dimen/default_circle_size"
+        android:src="@drawable/qlogo"
+        app:roundedCorners="true"
+        app:hasBorder="false"
+        android:layout_above="@+id/login"
+        android:layout_centerHorizontal="true" />
+
     <com.beardedhen.androidbootstrap.BootstrapButton
         android:id="@+id/login"
         style="@style/wrapping_button"
