@@ -26,6 +26,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.pranav.myapplication.MainPage" />
         </activity>
+        <activity
+            android:name="com.example.pranav.myapplication.HomePage"
+            android:label="@string/app_name"
+            android:parentActivityName="com.example.pranav.myapplication.MainPage" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.pranav.myapplication.MainPage" />
+        </activity>
     </application>
 
 </manifest>

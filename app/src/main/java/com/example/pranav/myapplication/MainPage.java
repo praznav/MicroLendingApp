@@ -10,6 +10,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 
 public class MainPage extends Activity {
@@ -60,7 +63,27 @@ public class MainPage extends Activity {
     }
 
     public void onLoginPress(View view) {
-        Intent intent = new Intent(this,LoginPage.class);
-        startActivity(intent);
+        EditText e = (EditText) findViewById(R.id.editText);
+        EditText f = (EditText) findViewById(R.id.pass);
+        String username = e.getText().toString();
+        String pass = f.getText().toString();
+
+        if (checkLoginInfo(username, pass)) {
+            Intent intent = new Intent(this, HomePage.class);
+            startActivity(intent);
+        } else {
+            Toast toast = Toast.makeText(getApplicationContext(), "Login Failed", Toast.LENGTH_SHORT);
+            toast.show();
+        }
+    }
+
+    // HARDCODED USERNAME AND PASSWORD FOR NOW
+    // THIS IS TEST PURPOSES ONLY
+    public boolean checkLoginInfo(String user, String pass) {
+        if (user.equals("Amy") && pass.equals("123"))
+            return true;
+        if (user.equals("Bob") && pass.equals("abc"))
+            return true;
+        return false;
     }
 }
