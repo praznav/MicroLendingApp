@@ -54,4 +54,34 @@ public class HTTP {
     public String getTransactions() {
         return getRequest("www.somethingelseOlegesays.com");
     }
+
+    public String PostRequest(){
+        String returnStr = "";
+        HttpClient httpClient = new DefaultHttpClient();
+        HttpPost httpPost = new HttpPost("http://www.example.com");
+        List<NameValuePair> nameValuePair = new ArrayList<NameValuePair>(2);
+        nameValuePair.add(new BasicNameValuePair("username", "test_user"));
+        nameValuePair.add(new BasicNameValuePair("password", "123456789"));
+
+
+        try {
+            httpPost.setEntity(new UrlEncodedFormEntity(nameValuePair));
+        } catch (UnsupportedEncodingException e)
+        {
+            e.printStackTrace();
+        }
+
+        try {
+            HttpResponse response = httpClient.execute(httpPost);
+            returnStr = response.toString();
+            Log.d("Http Post Response:", response.toString());
+        } catch (ClientProtocolException e) {
+            // Log exception
+            e.printStackTrace();
+        } catch (IOException e) {
+            // Log exception
+            e.printStackTrace();
+        }
+        return returnStr;
+    }
 }
