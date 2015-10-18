@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Current Balance: "
+        android:id="@+id/textView2"
+        android:textColor="@android:color/white"
+        android:layout_above="@+id/loan"
+        android:layout_alignLeft="@+id/loan"
+        android:layout_alignStart="@+id/loan"
+        android:layout_marginBottom="45dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Balance"
+        android:id="@+id/balance"
+        android:textColor="@android:color/white"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_alignRight="@+id/loan"
+        android:layout_alignEnd="@+id/loan" />
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Loan Money"
+        android:id="@+id/loan"
+        android:layout_above="@+id/borrow"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="28dp" />
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Borrow Money"
+        android:id="@+id/borrow"
+        android:layout_above="@+id/transactions"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="33dp" />
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Transaction History"
+        android:id="@+id/transactions"
+        android:layout_marginBottom="34dp"
+        android:layout_above="@+id/pending"
+        android:layout_alignLeft="@+id/borrow"
+        android:layout_alignStart="@+id/borrow" />
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Pending Transactions"
+        android:id="@+id/pending"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="106dp" />
+
+
+</RelativeLayout>
