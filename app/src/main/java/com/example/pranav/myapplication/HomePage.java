@@ -1,8 +1,10 @@
 package com.example.pranav.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.View;
 
 /**
  * Created by Pranav on 10/17/2015.
@@ -33,4 +35,21 @@ public class HomePage extends AppCompatActivity {
             return super.onOptionsItemSelected(item);
         }
 
+        public void onLoan(View view) {
+            Intent intent = new Intent(this, LoanPage.class);
+            startActivity(intent);
+        }
+
+    public void onBorrow(View view) {
+        Intent intent = new Intent(this, BorrowPage.class);
+        startActivity(intent);
+    }
+    public void onTransactionHistory(View view) {
+        Intent intent = new Intent(this, HistoryPage.class);
+        startActivity(intent);
+    }
+    public void onPendingTransactions(View view) {
+        Intent intent = new Intent(this, TransactionPage.class);
+        startActivity(intent);
+    }
 }

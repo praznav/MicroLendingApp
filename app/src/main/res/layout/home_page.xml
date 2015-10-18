@@ -32,6 +32,7 @@
         android:layout_height="wrap_content"
         android:text="Loan Money"
         android:id="@+id/loan"
+        android:onClick="onLoan"
         android:layout_above="@+id/borrow"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="28dp" />
@@ -41,6 +42,7 @@
         android:layout_height="wrap_content"
         android:text="Borrow Money"
         android:id="@+id/borrow"
+        android:onClick="onBorrow"
         android:layout_above="@+id/transactions"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="33dp" />
@@ -50,6 +52,7 @@
         android:layout_height="wrap_content"
         android:text="Transaction History"
         android:id="@+id/transactions"
+        android:onClick="onTransactionHistory"
         android:layout_marginBottom="34dp"
         android:layout_above="@+id/pending"
         android:layout_alignLeft="@+id/borrow"
@@ -60,6 +63,7 @@
         android:layout_height="wrap_content"
         android:text="Pending Transactions"
         android:id="@+id/pending"
+        android:onClick="onPendingTransactions"
         android:layout_marginBottom="128dp"
         android:layout_alignParentBottom="true"
         android:layout_alignLeft="@+id/transactions"
