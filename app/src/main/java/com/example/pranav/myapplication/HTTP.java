@@ -23,10 +23,7 @@ import org.apache.http.message.BasicNameValuePair;
 
 
 public class HTTP {
-
-    public HTTP() {
-
-    }
+    public static final String webURL = "http://hackatl2015.azurewebsites.net/api/requests/";
 
     public String getRequest(String website) {
         String returnString = "";
@@ -47,21 +44,24 @@ public class HTTP {
         return returnString;
     }
 
-    public String getRequests() {
-        return getRequest("www.somethingOlegSays.com");
+    public String getRequests(String user) {
+
+        return getRequest(webURL+user);
     }
 
+    // TODO: ADD FUNCTIONALITY
     public String getTransactions() {
         return getRequest("www.somethingelseOlegesays.com");
     }
 
-    public String PostRequest(){
+    public String postRequest(String borrower, String date, String amount){
         String returnStr = "";
         HttpClient httpClient = new DefaultHttpClient();
-        HttpPost httpPost = new HttpPost("http://www.example.com");
+        HttpPost httpPost = new HttpPost(webURL);
         List<NameValuePair> nameValuePair = new ArrayList<NameValuePair>(2);
-        nameValuePair.add(new BasicNameValuePair("username", "test_user"));
-        nameValuePair.add(new BasicNameValuePair("password", "123456789"));
+        nameValuePair.add(new BasicNameValuePair("borrower", borrower));
+        nameValuePair.add(new BasicNameValuePair("needed_by", date));
+        nameValuePair.add(new BasicNameValuePair("amount", amount));
 
 
         try {

@@ -1,6 +1,5 @@
 package com.example.pranav.myapplication;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
@@ -15,6 +14,8 @@ public class LoanPage extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.loan_page);
+        HTTP http = new HTTP();
+        http.postRequest("Amy", "9/5", "4");
 
     }
 
