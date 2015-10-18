@@ -60,9 +60,10 @@
         android:layout_height="wrap_content"
         android:text="Pending Transactions"
         android:id="@+id/pending"
+        android:layout_marginBottom="128dp"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="106dp" />
+        android:layout_alignLeft="@+id/transactions"
+        android:layout_alignStart="@+id/transactions" />
 
 
 </RelativeLayout>
